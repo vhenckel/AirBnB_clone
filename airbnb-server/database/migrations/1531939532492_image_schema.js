@@ -8,6 +8,7 @@ class ImageSchema extends Schema {
       table.increments()
       table 
         .integer('property_id')
+        .unsigned() 
         .references('id')
         .inTable('properties')
         .onUpdate('CASCADE')
