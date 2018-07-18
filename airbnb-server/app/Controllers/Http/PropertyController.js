@@ -9,8 +9,12 @@ class PropertyController {
    * Show a list of all properties.
    * GET properties
    */
-  async index ({ request, response, view }) {
-    const properties = Property.all()
+  async index ({ request }) {
+    const { latitude, longitude } = request.all()
+    const properties = Property.query()
+      .nearBy(latitude, longitude, 10)
+      .fetch()
+      
     return properties
   }
 
