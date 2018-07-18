@@ -1,0 +1,11 @@
+# Node modules
+airbnb-server/node_modules
+
+# Adonis directory for storing tmp files
+airbnb-server/tmp
+
+# Environment variables, never commit this file
+airbnb-server/.env
+
+# The development sqlite file
+airbnb-server/database/development.sqlite
