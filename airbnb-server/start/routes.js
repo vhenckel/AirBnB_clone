@@ -15,6 +15,8 @@
 
 const Route = use('Route')
 
+Route.get('/', 'HomeController.index')
+
 Route.post('/users', 'UserController.create')
 Route.post('/sessions', 'SessionController.create')
 Route.resource('properties', 'PropertyController')
